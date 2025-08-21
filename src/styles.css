@@ -1,0 +1,544 @@
+body {
+  background: #f0f4f9;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #20242a;
+  margin: 0;
+}
+
+.app-container {
+  max-width: 900px; /* Increased to accommodate new features */
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 32px #121b2726;
+  padding: 32px 24px 48px 24px;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin: 8px 0 20px 0;
+  font-weight: 700;
+}
+h1 {
+  color: #1a2247;
+  font-size: 2.1rem;
+  letter-spacing: -1px;
+}
+h2 {
+  font-size: 1.32rem;
+  color: #2257cc;
+  letter-spacing: -0.5px;
+}
+
+/* Forms */
+input, select {
+  font-size: 1rem;
+  width: 14rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #c2d2ed;
+  background: #f7fbff;
+  outline: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 6px;
+  transition: border-color 0.2s;
+}
+
+select {
+    width: 15.7rem;
+}
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+  border-color: #3985f7;
+}
+
+/* Buttons */
+button {
+  font-weight: 600;
+  border: none;
+  background: #3474ee;
+  color: #fff;
+  border-radius: 5px;
+  padding: 9px 22px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 4px 0 0 0;
+  transition: background 0.14s;
+}
+button:active,
+button:focus {
+  background: #1150a1;
+}
+button[disabled] {
+  background: #b3c6e3;
+  color: #dedede;
+  cursor: not-allowed;
+}
+.remove-btn {
+  background: #d83737;
+}
+.remove-btn:active { background: #801219; }
+
+/* Card-like elements */
+.stage-card {
+  background: #f5f9fd;
+  border-radius: 12px;
+  box-shadow: 0 1px 10px #2d3b5110;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  border: 1px solid #e6eefa;
+  position: relative;
+}
+.workflow-builder-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.stage-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+/* Status colors */
+.status-pill {
+  display: inline-block;
+  min-width: 90px;
+  padding: 6px 16px;
+  border-radius: 24px;
+  background: #eceffe;
+  font-weight: 600;
+  color: #3962d5;
+  font-size: 0.93rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+.status-pending {
+  background: #fffbe9;
+  color: #b18b13;
+}
+.status-inprogress {
+  background: #e9f2ff;
+  color: #0c67c1;
+}
+.status-completed {
+  background: #e9faea;
+  color: #1e9249;
+}
+
+/* Gallery */
+.media-gallery {
+  margin-top: 10px;
+  display: flex;
+  gap: 7px;
+}
+.media-img {
+  border-radius: 6px;
+  box-shadow: 0 2px 6px #4683cf2d;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border: 2px solid #e2ecfd;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  margin-bottom: 24px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.export-btn, .log-btn, .clear-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.export-btn {
+  background: #43a047;
+  color: white;
+}
+.export-btn:hover { background: #357a35; }
+
+.log-btn {
+  background: #1976d2;
+  color: white;
+}
+.log-btn:hover { background: #125a9c; }
+
+.clear-btn {
+  background: #d32f2f;
+  color: white;
+}
+.clear-btn:hover { background: #9a1f1f; }
+
+/* Dashboard Summary text */
+.dashboard-summary {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Summary Grid */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #f5f9fd 0%, #e8f4fd 100%);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 1px solid #e6eefa;
+}
+
+.summary-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-card p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2257cc;
+}
+
+/* Activity Log */
+.activity-log {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #e9ecef;
+}
+
+.activity-log h3 {
+  margin-top: 0;
+  color: #495057;
+}
+
+.log-entries {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  display: grid;
+  grid-template-columns: 150px 120px 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.85rem;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.log-timestamp {
+  color: #6c757d;
+  font-family: monospace;
+}
+
+.log-action {
+  font-weight: 600;
+  color: #1976d2;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.log-details {
+  color: #495057;
+}
+
+/* Charts Container */
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.chart-item {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e6eefa;
+}
+
+.chart-item h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Contractor Statistics */
+.contractor-stats {
+  margin-bottom: 24px;
+}
+
+.contractor-stats h3 {
+  color: #2257cc;
+}
+
+.contractor-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid #e6eefa;
+}
+
+.contractor-table th,
+.contractor-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e3e7ee;
+  font-size: 0.95rem;
+}
+
+.contractor-table th {
+  background: #f0f4f9;
+  font-weight: 700;
+  color: #2257cc;
+  letter-spacing: 0.03em;
+}
+
+.contractor-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+/* Dashboard Table styles */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 8px #d6defa;
+  margin-top: 20px;
+}
+
+.dashboard-table thead tr {
+  background-color: #f0f4f9;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e3e7ee;
+  text-align: left;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+/* Input and select fields inside dashboard */
+.dashboard-input {
+  width: 100%;
+  padding: 6px 9px;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  border: 1px solid #c2d2ed;
+  outline: none;
+  background: #f7fbff;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.dashboard-input:focus {
+  border-color: #3985f7;
+}
+
+/* Status select colors */
+.status-pending {
+  color: #b18b13;
+  font-weight: 700;
+}
+.status-inprogress {
+  color: #0c67c1;
+  font-weight: 700;
+}
+.status-completed {
+  color: #1e9249;
+  font-weight: 700;
+}
+
+/* Remove button in dashboard */
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #d83737;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.remove-btn:hover {
+  color: #801219;
+}
+
+.remove-cell {
+  text-align: center;
+  width: 50px;
+}
+
+/* No stages message */
+.no-stage {
+  text-align: center;
+  padding: 20px 0;
+  font-style: italic;
+  color: #999;
+}
+
+/* Workflow Builder Form */
+.workflow-builder-container {
+  margin-top: 20px;
+}
+
+.workflow-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.workflow-input {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #c2d2ed;
+  font-size: 1rem;
+  flex: 1 1 14rem;
+  min-width: 140px;
+  background: #f7fbff;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.workflow-input:focus {
+  border-color: #3985f7;
+}
+
+.workflow-submit-btn {
+  background: #3474ee;
+  color: #fff;
+  padding: 9px 22px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  flex: 1 1 120px;
+  min-width: 120px;
+  cursor: pointer;
+  transition: background 0.14s;
+}
+
+.workflow-submit-btn:hover,
+.workflow-submit-btn:focus {
+  background: #1150a1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .app-container {
+    max-width: 95%;
+    padding: 20px 16px 32px 16px;
+  }
+  
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .log-entry {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  
+  .contractor-table {
+    font-size: 0.85rem;
+  }
+  
+  .contractor-table th,
+  .contractor-table td {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .workflow-form {
+    flex-direction: column;
+  }
+  .workflow-input,
+  .workflow-submit-btn {
+    min-width: 100%;
+    flex: 1 1 auto;
+  }
+  
+  .stage-fields {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .dashboard-table {
+    font-size: 0.8rem;
+  }
+  
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 8px 10px;
+  }
+}
