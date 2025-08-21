@@ -3,7 +3,7 @@ import WorkflowBuilder from "./components/WorkflowBuilder";
 import Login from "./components/Login";
 import { AuthContext } from "./contexts/AuthContext";
 import "./styles.css";
-import Dashboard from "./components/DashBoard";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   const { user, logout } = useContext(AuthContext);
